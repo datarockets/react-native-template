@@ -1,0 +1,24 @@
+{
+  "name": "@datarockets/react-native-template-js",
+  "description": "React Native template project with JS",
+  "version": "0.0.1",
+  "author": "datarockets",
+  "license": "MIT",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datarockets/react-native-template.git"
+  },
+  "keywords": [
+    "react-native",
+    "template",
+    "boilerplate"
+  ],
+  "files": [
+    "template",
+    "template.config.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
