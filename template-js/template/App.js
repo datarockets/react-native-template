@@ -1,11 +1,10 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+
+import { MainNavigator } from './src/navigation'
 
 const App = () => {
   return (
-    <View>
-      <Text>Template</Text>
-    </View>
+    <MainNavigator/>
   )
 }
 
