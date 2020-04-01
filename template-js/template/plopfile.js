@@ -7,7 +7,7 @@ module.exports = function (plop) {
         name: 'name',
         message: 'name the new model',
         validate(value) {
-          return (/.+/).test(value) ? true : 'name is required';
+          return (/.+/).test(value) ? true : 'name is required'
         },
       },
     ],
