@@ -13,7 +13,8 @@ module.exports = {
     },
   },
   env: {
-    'react-native/react-native': true
+    'jest': true,
+    'react-native/react-native': true,
   },
   plugins: [
     'react',
