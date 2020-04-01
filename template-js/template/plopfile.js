@@ -5,7 +5,7 @@ module.exports = function (plop) {
       {
         type: 'input',
         name: 'name',
-        message: 'name the new model',
+        message: 'Name a new model. NOTE: manually register the new model in the src/models/index.js.',
         validate(value) {
           return (/.+/).test(value) ? true : 'name is required'
         },
