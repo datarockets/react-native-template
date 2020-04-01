@@ -1,5 +1,7 @@
+const prefix = 'COUNTER'
+
 export default {
-  increment: 'COUNTER.INCREMENT',
-  decrement: 'COUNTER.DECREMENT',
-  reset: 'COUNTER.RESET',
+  increment: `${prefix}.INCREMENT`,
+  decrement: `${prefix}.DECREMENT`,
+  reset: `${prefix}.RESET`,
 }
