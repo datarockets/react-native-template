@@ -15,7 +15,8 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "gen:model": "plop model"
+    "gen:model": "plop model",
+    "postinstall": "react-native-schemes-manager all"
   },
   "husky": {
     "hooks": {
@@ -26,6 +27,11 @@
     "./**/*.js": [
       "yarn lint:fix"
     ]
+  },
+  "xcodeSchemes": {
+    "Debug": ["-Dev", "-Prod"],
+    "Release": ["-Dev", "-Prod"],
+    "projectDirectory": "ios"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.8.1",
@@ -62,6 +68,7 @@
     "lint-staged": "^10.1.1",
     "metro-react-native-babel-preset": "^0.58.0",
     "plop": "^2.6.0",
+    "react-native-schemes-manager": "^2.0.0",
     "react-test-renderer": "16.11.0"
   },
   "jest": {
