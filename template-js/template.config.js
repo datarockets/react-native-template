@@ -1,4 +1,4 @@
 module.exports = {
-  placeholderName: 'DatarocketsRNTemplateJS',
+  placeholderName: 'DR',
   templateDir: './template',
 }
