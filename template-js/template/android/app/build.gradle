@@ -150,6 +150,13 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            // TODO: Replace with release keystore
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
     }
     buildTypes {
         debug {
@@ -158,8 +165,8 @@ android {
             versionNameSuffix "-debug"
         }
         release {
-            debuggable true
-            signingConfig signingConfigs.debug
+            debuggable false
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

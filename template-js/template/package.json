@@ -9,6 +9,8 @@
     "android:run:dev:release": "react-native run-android --variant=devRelease --appIdSuffix=dev",
     "android:run:prod": "react-native run-android --variant=prodDebug",
     "android:run:prod:release": "react-native run-android --variant=prodRelease",
+    "android:assemble:dev:release": "(cd android && ./gradlew app:assembleDevRelease)",
+    "android:assemble:prod:release": "(cd android && ./gradlew app:assembleProdRelease)",
     "ios": "react-native run-ios",
     "test": "jest",
     "lint": "eslint .",
