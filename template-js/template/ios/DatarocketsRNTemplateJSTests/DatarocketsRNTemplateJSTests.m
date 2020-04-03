@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface templateTests : XCTestCase
+@interface DatarocketsRNTemplateJSTests : XCTestCase
 
 @end
 
-@implementation templateTests
+@implementation DatarocketsRNTemplateJSTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
