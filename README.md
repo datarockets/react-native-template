@@ -2,7 +2,7 @@
 
 Template for `react-native` project by `datarockets`.
 
-With preconfigured navigation and state management.
+With preconfigured [navigation](https://github.com/react-navigation/react-navigation), [state management](https://github.com/reduxjs/redux) and [CodePush](https://github.com/microsoft/react-native-code-push).
 
 ## Structure
 
