@@ -3,13 +3,23 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "start": "react-native start",
+    "start:reset": "react-native start --reset-cache",
+    "android:run:dev": "react-native run-android --variant=devDebug --appIdSuffix=dev",
+    "android:run:dev:release": "react-native run-android --variant=devRelease --appIdSuffix=dev",
+    "android:run:prod": "react-native run-android --variant=prodDebug",
+    "android:run:prod:release": "react-native run-android --variant=prodRelease",
+    "android:assemble:dev:release": "(cd android && ./gradlew app:assembleDevRelease)",
+    "android:assemble:prod:release": "(cd android && ./gradlew app:assembleProdRelease)",
+    "ios:run:dev": "react-native run-ios --scheme DatarocketsRNTemplateJS-Dev --configuration Debug",
+    "ios:run:dev:release": "react-native run-ios --scheme DatarocketsRNTemplateJS-Dev --configuration Release ",
+    "ios:run:prod": "react-native run-ios --scheme DatarocketsRNTemplateJS-Prod --configuration Debug",
+    "ios:run:prod:release": "react-native run-ios --scheme DatarocketsRNTemplateJS-Prod --configuration Release",
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "gen:model": "plop model"
+    "gen:model": "plop model",
+    "postinstall": "react-native-schemes-manager all"
   },
   "husky": {
     "hooks": {
@@ -21,6 +31,11 @@
       "yarn lint:fix"
     ]
   },
+  "xcodeSchemes": {
+    "Debug": ["-Dev", "-Prod"],
+    "Release": ["-Dev", "-Prod"],
+    "projectDirectory": "ios"
+  },
   "dependencies": {
     "@react-native-community/async-storage": "^1.8.1",
     "@react-native-community/masked-view": "^0.1.7",
@@ -28,6 +43,7 @@
     "@react-navigation/stack": "^5.2.9",
     "react": "16.11.0",
     "react-native": "0.62.0",
+    "react-native-config": "^1.0.0",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-reanimated": "^1.7.1",
     "react-native-safe-area-context": "^0.7.3",
@@ -55,6 +71,7 @@
     "lint-staged": "^10.1.1",
     "metro-react-native-babel-preset": "^0.58.0",
     "plop": "^2.6.0",
+    "react-native-schemes-manager": "^2.0.0",
     "react-test-renderer": "16.11.0"
   },
   "jest": {
