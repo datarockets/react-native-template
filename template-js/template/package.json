@@ -21,11 +21,7 @@
     "gen:model": "plop model",
     "postinstall": "react-native-schemes-manager all"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+  
   "lint-staged": {
     "./**/*.js": [
       "yarn lint:fix"
