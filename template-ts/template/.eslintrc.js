@@ -25,6 +25,10 @@ module.exports = {
       },
     },
   },
+  env: {
+    'jest': true,
+    'react-native/react-native': true,
+  },
   rules: {
     'arrow-body-style': 'off',
     'consistent-return': 'off',
