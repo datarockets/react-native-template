@@ -15,6 +15,16 @@ module.exports = {
     'react-hooks',
     '@typescript-eslint',
   ],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      'typescript': {
+        'alwaysTryTypes': true,
+      },
+    },
+  },
   rules: {
     'arrow-body-style': 'off',
     'consistent-return': 'off',
