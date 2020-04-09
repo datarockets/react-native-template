@@ -161,7 +161,6 @@
 				07A3E6841A79540FDB1B62C8 /* Pods-DatarocketsRNTemplateTS-tvOSTests.debug.xcconfig */,
 				282453A8D6542CBC9564661D /* Pods-DatarocketsRNTemplateTS-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -637,12 +636,13 @@
 				);
 				INFOPLIST_FILE = DatarocketsRNTemplateTS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DatarocketsRNTemplateTS;
 				PRODUCT_NAME = DatarocketsRNTemplateTS;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -659,12 +659,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = DatarocketsRNTemplateTS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DatarocketsRNTemplateTS;
 				PRODUCT_NAME = DatarocketsRNTemplateTS;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
