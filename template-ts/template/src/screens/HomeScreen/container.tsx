@@ -2,7 +2,7 @@ import React from 'react'
 
 import HomeScreenView from './view'
 
-interface HomeScreenContainerProps {
+type HomeScreenContainerProps = {
 }
 
 const HomeScreenContainer: React.FC<HomeScreenContainerProps> = () => {
