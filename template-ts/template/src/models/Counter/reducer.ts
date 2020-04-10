@@ -1,10 +1,15 @@
+import { Reducer } from 'redux'
+
 import { types, CounterActionTypes, CounterState } from './types'
 
 const initialState: CounterState = {
   amount: 0,
 }
 
-const counterReducer = (state = initialState, action: CounterActionTypes): CounterState => {
+const counterReducer: Reducer<CounterState, CounterActionTypes> = (
+  state = initialState,
+  action: CounterActionTypes,
+): CounterState => {
   const { type, payload } = action
 
   switch (type) {

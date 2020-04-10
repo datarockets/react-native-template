@@ -1,3 +1,5 @@
+import { Action } from 'redux'
+
 const prefix = 'COUNTER'
 
 export const types =  {
@@ -10,21 +12,21 @@ export interface CounterState {
   amount: number,
 }
 
-export interface IncrementCounterAction {
+export interface IncrementCounterAction extends Action {
   type: typeof types.increment,
   payload: {
     incrementAmount: number,
   },
 }
 
-interface DecrementCounterAction {
+interface DecrementCounterAction extends Action {
   type: typeof types.decrement,
   payload: {
     decrementAmount: number,
   },
 }
 
-interface ResetCounterAction {
+interface ResetCounterAction extends Action {
   type: typeof types.reset,
   payload: null,
 }
