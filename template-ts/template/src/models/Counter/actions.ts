@@ -1,20 +1,20 @@
-import { types, CounterActionTypes } from './types'
+import { CounterTypes, DecrementCounterAction, CounterActionTypes } from './types'
 
 export default {
   increment: (incrementAmount: number): CounterActionTypes => ({
-    type: types.increment,
+    type: CounterTypes.increment,
     payload: {
       incrementAmount,
     },
   }),
-  decrement: (decrementAmount: number): CounterActionTypes => ({
-    type: types.decrement,
+  decrement: (decrementAmount: number): DecrementCounterAction => ({
+    type: CounterTypes.decrement,
     payload: {
       decrementAmount,
     },
   }),
   reset: (): CounterActionTypes => ({
-    type: types.reset,
+    type: CounterTypes.reset,
     payload: null,
   }),
 }

@@ -1,11 +1,9 @@
 import { Action } from 'redux'
 
-const prefix = 'COUNTER'
-
-export const types =  {
-  increment: `${prefix}.INCREMENT`,
-  decrement: `${prefix}.DECREMENT`,
-  reset: `${prefix}.RESET`,
+export enum CounterTypes {
+  increment = 'COUNTER.INCREMENT',
+  decrement = 'COUNTER.DECREMENT',
+  reset = 'COUNTER.RESET',
 }
 
 export interface CounterState {
@@ -13,21 +11,21 @@ export interface CounterState {
 }
 
 export interface IncrementCounterAction extends Action {
-  type: typeof types.increment,
+  type: CounterTypes.increment,
   payload: {
     incrementAmount: number,
   },
 }
 
-interface DecrementCounterAction extends Action {
-  type: typeof types.decrement,
+export interface DecrementCounterAction extends Action {
+  type: CounterTypes.decrement,
   payload: {
     decrementAmount: number,
   },
 }
 
-interface ResetCounterAction extends Action {
-  type: typeof types.reset,
+export interface ResetCounterAction extends Action {
+  type: CounterTypes.reset,
   payload: null,
 }
 
