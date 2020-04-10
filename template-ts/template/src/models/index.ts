@@ -28,10 +28,7 @@ const sagas = function* watch() {
 
 const initStore = () => {
   const sagaMiddleware = createSagaMiddleware()
-  const store = createStore(
-    persistedReducer,
-    applyMiddleware(sagaMiddleware),
-  )
+  const store = createStore(persistedReducer, applyMiddleware(sagaMiddleware))
   const persistor = persistStore(store)
 
   sagaMiddleware.run(sagas)
