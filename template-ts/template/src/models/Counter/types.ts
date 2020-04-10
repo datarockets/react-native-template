@@ -7,25 +7,25 @@ export enum CounterTypes {
 }
 
 export interface CounterState {
-  amount: number,
+  amount: number;
 }
 
 interface IncrementCounterAction extends Action<CounterTypes.increment> {
-  type: CounterTypes.increment,
+  type: CounterTypes.increment;
   payload: {
-    incrementAmount: number,
-  },
+    incrementAmount: number;
+  };
 }
 
 interface DecrementCounterAction extends Action<CounterTypes.decrement> {
-  type: CounterTypes.decrement,
+  type: CounterTypes.decrement;
   payload: {
-    decrementAmount: number,
-  },
+    decrementAmount: number;
+  };
 }
 
 interface ResetCounterAction extends Action<CounterTypes.reset> {
-  type: CounterTypes.reset,
+  type: CounterTypes.reset;
 }
 
 export type CounterActionTypes = IncrementCounterAction

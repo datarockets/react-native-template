@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 import createSagaMiddleware from 'redux-saga'
 import { all } from 'redux-saga/effects'
 import { applyMiddleware, combineReducers, createStore } from 'redux'
-import { persistStore, persistReducer, Persistor } from 'redux-persist'
+import { persistStore, persistReducer } from 'redux-persist'
 
 import CounterReducer from './Counter/reducer'
 

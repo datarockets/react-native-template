@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import HomeScreen from '../screens/HomeScreen'
 
 type MainStackParamList = {
-  HomeScreen: undefined,
+  HomeScreen: undefined;
 }
 
 const Stack = createStackNavigator<MainStackParamList>()
