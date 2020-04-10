@@ -10,21 +10,21 @@ export interface CounterState {
   amount: number,
 }
 
-export interface IncrementCounterAction extends Action {
+interface IncrementCounterAction extends Action<CounterTypes.increment> {
   type: CounterTypes.increment,
   payload: {
     incrementAmount: number,
   },
 }
 
-export interface DecrementCounterAction extends Action {
+interface DecrementCounterAction extends Action<CounterTypes.decrement> {
   type: CounterTypes.decrement,
   payload: {
     decrementAmount: number,
   },
 }
 
-export interface ResetCounterAction extends Action {
+interface ResetCounterAction extends Action<CounterTypes.reset> {
   type: CounterTypes.reset,
   payload: null,
 }

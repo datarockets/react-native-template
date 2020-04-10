@@ -1,12 +1,6 @@
 import { Reducer } from 'redux'
 
-import {
-  CounterTypes,
-  CounterActionTypes,
-  IncrementCounterAction,
-  DecrementCounterAction,
-  CounterState,
-} from './types'
+import { CounterTypes, CounterActionTypes, CounterState } from './types'
 
 const initialState: CounterState = {
   amount: 0,
@@ -20,12 +14,12 @@ const counterReducer: Reducer<CounterState, CounterActionTypes> = (
     case CounterTypes.increment:
       return {
         ...state,
-        amount: state.amount + (action as IncrementCounterAction).payload.incrementAmount,
+        amount: state.amount + action.payload.incrementAmount,
       }
     case CounterTypes.decrement:
       return {
         ...state,
-        amount: state.amount - (action as DecrementCounterAction).payload.decrementAmount,
+        amount: state.amount - action.payload.decrementAmount,
       }
     case CounterTypes.reset:
       return {
