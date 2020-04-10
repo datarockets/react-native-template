@@ -1,4 +1,4 @@
-import { RootState } from '../index'
+import { RootState } from '../Root'
 
 import { CounterState } from './types'
 
