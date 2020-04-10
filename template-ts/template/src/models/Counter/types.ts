@@ -26,7 +26,6 @@ interface DecrementCounterAction extends Action<CounterTypes.decrement> {
 
 interface ResetCounterAction extends Action<CounterTypes.reset> {
   type: CounterTypes.reset,
-  payload: null,
 }
 
 export type CounterActionTypes = IncrementCounterAction

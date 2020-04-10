@@ -15,6 +15,5 @@ export default {
   }),
   reset: (): CounterActionTypes => ({
     type: CounterTypes.reset,
-    payload: null,
   }),
 }
