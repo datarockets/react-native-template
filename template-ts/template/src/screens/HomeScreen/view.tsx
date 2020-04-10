@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-type  HomeScreenViewProps = {
+type HomeScreenViewProps = {
 }
 
 const HomeScreenView: React.FC<HomeScreenViewProps> = () => {
