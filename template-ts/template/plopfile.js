@@ -83,7 +83,7 @@ module.exports = function (plop) {
       {
         type: 'input',
         name: 'name',
-        message: 'Name a new screen.',
+        message: 'Name a new screen. NOTE: manually register the new screen in the navigator.',
         validate(value) {
           return (/.+/).test(value) ? true : 'name is required'
         },
