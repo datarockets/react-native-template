@@ -1,5 +1,11 @@
 apply plugin: "com.android.application"
 
+project.ext.envConfigFiles = [
+    dev: ".env.dev",
+    prod: ".env.prod",
+]
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 import com.android.build.OutputFile
 
 /**
@@ -177,11 +183,11 @@ android {
             dimension "env"
             applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
-            resValue "string", "build_config_package", "com.datarocketsrntemplatejs"
+            resValue "string", "build_config_package", "com.datarocketsrntemplatets"
         }
         prod {
             dimension "env"
-            resValue "string", "build_config_package", "com.datarocketsrntemplatejs"
+            resValue "string", "build_config_package", "com.datarocketsrntemplatets"
         }
     }
 
