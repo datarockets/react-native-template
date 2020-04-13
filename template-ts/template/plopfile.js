@@ -77,4 +77,37 @@ module.exports = function (plop) {
       },
     ],
   })
+  plop.setGenerator('screen', {
+    description: 'generate a screen',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Name a new screen.',
+        validate(value) {
+          return (/.+/).test(value) ? true : 'name is required'
+        },
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/screens/{{ pascalCase name }}Screen/index.tsx',
+        templateFile: 'templates/screen/index.tsx',
+      },
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/screens/{{ pascalCase name }}Screen/view.tsx',
+        templateFile: 'templates/screen/view.tsx',
+      },
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/screens/{{ pascalCase name }}Screen/styles.ts',
+        templateFile: 'templates/screen/styles.ts',
+      },
+    ],
+  })
 }

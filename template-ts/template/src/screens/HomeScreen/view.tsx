@@ -1,14 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
+
+import styles from './styles'
 
 type HomeScreenViewProps = {
 }
 
 const HomeScreenView: React.FC<HomeScreenViewProps> = () => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <View/>
   )
 }
 
