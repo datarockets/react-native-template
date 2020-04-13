@@ -6,13 +6,22 @@
     "start": "react-native start",
     "start:reset": "react-native start --reset-cache",
     "android:run:dev": "react-native run-android --variant=devDebug --appIdSuffix=dev",
-    "ios:run": "react-native run-ios --scheme DatarocketsRNTemplateTS --configuration Debug",
+    "android:run:dev:release": "react-native run-android --variant=devRelease --appIdSuffix=dev",
+    "android:run:prod": "react-native run-android --variant=prodDebug",
+    "android:run:prod:release": "react-native run-android --variant=prodRelease",
+    "android:assemble:dev:release": "(cd android && ./gradlew app:assembleDevRelease)",
+    "android:assemble:prod:release": "(cd android && ./gradlew app:assembleProdRelease)",
+    "ios:run:dev": "react-native run-ios --scheme DatarocketsRNTemplateJS-Dev --configuration Debug",
+    "ios:run:dev:release": "react-native run-ios --scheme DatarocketsRNTemplateJS-Dev --configuration Release ",
+    "ios:run:prod": "react-native run-ios --scheme DatarocketsRNTemplateJS-Prod --configuration Debug",
+    "ios:run:prod:release": "react-native run-ios --scheme DatarocketsRNTemplateJS-Prod --configuration Release",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "gen:component": "plop component",
     "gen:model": "plop model",
-    "gen:screen": "plop screen"
+    "gen:screen": "plop screen",
+    "postinstall": "react-native-schemes-manager all"
   },
   "husky": {
     "hooks": {
@@ -23,6 +32,17 @@
     "./**/*.js": [
       "yarn lint:fix"
     ]
+  },
+  "xcodeSchemes": {
+    "Debug": [
+      "-Dev",
+      "-Prod"
+    ],
+    "Release": [
+      "-Dev",
+      "-Prod"
+    ],
+    "projectDirectory": "ios"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.9.0",

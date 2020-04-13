@@ -58,6 +58,7 @@
 		2D02E4901E0B4A5D006451C7 /* DatarocketsRNTemplateTS-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DatarocketsRNTemplateTS-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E00C09B2A84569BC6C8D015 /* Pods-DatarocketsRNTemplateTS-DatarocketsRNTemplateTSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatarocketsRNTemplateTS-DatarocketsRNTemplateTSTests.debug.xcconfig"; path = "Target Support Files/Pods-DatarocketsRNTemplateTS-DatarocketsRNTemplateTSTests/Pods-DatarocketsRNTemplateTS-DatarocketsRNTemplateTSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		76C134B1FE14413926F2CEF5 /* libPods-DatarocketsRNTemplateTS-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DatarocketsRNTemplateTS-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D798F2244486C900C25656 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		83B114998CE4A2A9CD2C82B6 /* Pods-DatarocketsRNTemplateTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatarocketsRNTemplateTS.release.xcconfig"; path = "Target Support Files/Pods-DatarocketsRNTemplateTS/Pods-DatarocketsRNTemplateTS.release.xcconfig"; sourceTree = "<group>"; };
 		976980780DE32A82C77D8ED6 /* libPods-DatarocketsRNTemplateTS-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DatarocketsRNTemplateTS-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14BB01EAC344A3B44FFC1AA /* Pods-DatarocketsRNTemplateTS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatarocketsRNTemplateTS.debug.xcconfig"; path = "Target Support Files/Pods-DatarocketsRNTemplateTS/Pods-DatarocketsRNTemplateTS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				80D798F2244486C900C25656 /* Config.xcconfig */,
 				13B07FAE1A68108700A75B9A /* DatarocketsRNTemplateTS */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DatarocketsRNTemplateTSTests */,
@@ -372,7 +374,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export DEVELOPMENT_BUILD_CONFIGURATIONS=\"+(-Dev|-Prod|Debug)\"\nexport NODE_BINARY=node\n../node_modules/react-native-schemes-manager/lib/react-native-xcode.sh";
 		};
 		168EF1206B9B82B216F55E97 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -784,6 +786,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80D798F2244486C900C25656 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -844,6 +847,7 @@
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80D798F2244486C900C25656 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
