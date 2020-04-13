@@ -66,6 +66,7 @@
     "lint-staged": "^10.1.3",
     "metro-react-native-babel-preset": "^0.58.0",
     "plop": "^2.6.0",
+    "react-native-schemes-manager": "^2.0.0",
     "react-test-renderer": "16.11.0",
     "typescript": "^3.8.3"
   },
