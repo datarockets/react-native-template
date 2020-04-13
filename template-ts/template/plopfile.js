@@ -1,4 +1,31 @@
 module.exports = function (plop) {
+  plop.setGenerator('component', {
+    description: 'generate a component',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Name a new component.',
+        validate(value) {
+          return (/.+/).test(value) ? true : 'name is required'
+        },
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/components/{{ pascalCase name }}/index.tsx',
+        templateFile: 'templates/component/index.tsx',
+      },
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/components/{{ pascalCase name }}/styles.ts',
+        templateFile: 'templates/component/styles.ts',
+      },
+    ],
+  })
   plop.setGenerator('model', {
     description: 'generates a model',
     prompts: [
