@@ -1,5 +1,7 @@
 # 🚀 React Native Template TS
 
+[![npm version](https://badge.fury.io/js/%40datarockets%2Freact-native-template-ts.svg)](https://badge.fury.io/js/%40datarockets%2Freact-native-template-ts)
+
 ## 📦 What's included
 
 - Preconfigured `react=navigation`, `redux`, `react-native-config` and `react-native-code-push`

@@ -1,5 +1,7 @@
 # 🚀 React Native Template JS
 
+[![npm version](https://badge.fury.io/js/%40datarockets%2Freact-native-template-js.svg)](https://badge.fury.io/js/%40datarockets%2Freact-native-template-js)
+
 ## 📦 What's included
 
 - Preconfigured `react=navigation`, `redux`, `react-native-config` and `react-native-code-push`
