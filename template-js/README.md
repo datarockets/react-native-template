@@ -4,7 +4,7 @@
 
 ## 📦 What's included
 
-- Preconfigured `react=navigation`, `redux`, `react-native-config` and `react-native-code-push`
+- Preconfigured `react-navigation`, `redux`, `react-native-config` and `react-native-code-push`
 - Two preconfigured environments: `dev` and `prod`
 - Easy components, screens and models generation by template
 
