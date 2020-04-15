@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "datarockets",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/datarockets/react-native-template#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/datarockets/react-native-template.git"
@@ -20,5 +20,9 @@
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/datarockets/react-native-template/issues"
+  },
+  "main": "template.config.js"
 }

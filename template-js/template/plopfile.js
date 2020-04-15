@@ -49,7 +49,7 @@ module.exports = function (plop) {
         templateFile: 'templates/model/types.js',
       },
     ],
-  }),
+  })
   plop.setGenerator('component', {
     description: 'generates a functional component',
     prompts: [
@@ -76,7 +76,7 @@ module.exports = function (plop) {
         templateFile: 'templates/component/styles.js',
       },
     ],
-  }),
+  })
   plop.setGenerator('screen', {
     description: 'generates a screen component',
     prompts: [
@@ -93,19 +93,19 @@ module.exports = function (plop) {
       {
         type: 'add',
         skipIfExists: true,
-        path: 'src/screens/{{ pascalCase name }}/index.js',
+        path: 'src/screens/{{ pascalCase name }}Screen/index.js',
         templateFile: 'templates/screen/index.js',
       },
       {
         type: 'add',
         skipIfExists: true,
-        path: 'src/screens/{{ pascalCase name }}/styles.js',
+        path: 'src/screens/{{ pascalCase name }}Screen/styles.js',
         templateFile: 'templates/screen/styles.js',
       },
       {
         type: 'add',
         skipIfExists: true,
-        path: 'src/screens/{{ pascalCase name }}/view.js',
+        path: 'src/screens/{{ pascalCase name }}Screen/view.js',
         templateFile: 'templates/screen/view.js',
       },
     ],
