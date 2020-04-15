@@ -18,7 +18,9 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "gen:component": "plop component",
     "gen:model": "plop model",
+    "gen:screen": "plop screen",
     "postinstall": "react-native-schemes-manager all"
   },
   "husky": {
