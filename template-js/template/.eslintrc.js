@@ -23,6 +23,11 @@ module.exports = {
     'jsx-a11y',
     'react-hooks',
   ],
+  settings: {
+    'import/resolver': {
+      'babel-module': {},
+    },
+  },
   rules: {
     'arrow-body-style': 'off',
     'consistent-return': 'off',
