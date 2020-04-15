@@ -2,8 +2,8 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import { MainNavigator } from './src/navigation'
-import models from './src/models'
+import { MainNavigator } from 'src/navigation'
+import models from 'src/models'
 
 const App = () => {
   const { store, persistor } = models.initStore()
