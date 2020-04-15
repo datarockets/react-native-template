@@ -4,18 +4,18 @@ import PropTypes from 'prop-types'
 
 import styles from './styles'
 
-const {{ pascaleCase name }} = () => {
+const {{ pascalCase name }} = () => {
   return (
     <View/>
   )
 }
 
-const { } = PropTypes
+const {} = PropTypes
 
-{{ pascaleCase name }}.propTypes = {
+{{ pascalCase name }}.propTypes = {
 }
 
-{{ pascaleCase name }}.defaultProps = {
+{{ pascalCase name }}.defaultProps = {
 }
 
-export default {{ pascaleCase name }}
+export default {{ pascalCase name }}
