@@ -1,14 +1,12 @@
 import React from 'react'
-import { View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
+import View from './view'
 import styles from './styles'
 
 const {{ properCase name }}Screen = ({ text }) => {
   return (
-    <View style={styles.container}>
-      <Text>{text}</Text>
-    </View>
+    <View />
   )
 }
 

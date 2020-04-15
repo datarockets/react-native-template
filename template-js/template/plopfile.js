@@ -102,6 +102,12 @@ module.exports = function (plop) {
         path: 'src/screens/{{ pascalCase name }}/styles.js',
         templateFile: 'templates/screen/styles.js',
       },
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/screens/{{ pascalCase name }}/view.js',
+        templateFile: 'templates/screen/view.js',
+      },
     ],
   })
 }
