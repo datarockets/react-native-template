@@ -3,13 +3,10 @@ import { View } from 'react-native'
 
 import styles from './styles'
 
-type HomeScreenViewProps = {
-}
-
-const HomeScreenView: React.FC<HomeScreenViewProps> = () => {
+const {{ pascalCase name }}: React.FC = () => {
   return (
     <View/>
   )
 }
 
-export default HomeScreenView
+export default {{ pascalCase name }}

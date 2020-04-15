@@ -10,7 +10,9 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "gen:model": "plop model"
+    "gen:component": "plop component",
+    "gen:model": "plop model",
+    "gen:screen": "plop screen"
   },
   "husky": {
     "hooks": {

@@ -1,4 +1,31 @@
 module.exports = function (plop) {
+  plop.setGenerator('component', {
+    description: 'generate a component',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Name a new component.',
+        validate(value) {
+          return (/.+/).test(value) ? true : 'name is required'
+        },
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/components/{{ pascalCase name }}/index.tsx',
+        templateFile: 'templates/component/index.tsx',
+      },
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/components/{{ pascalCase name }}/styles.ts',
+        templateFile: 'templates/component/styles.ts',
+      },
+    ],
+  })
   plop.setGenerator('model', {
     description: 'generates a model',
     prompts: [
@@ -47,6 +74,39 @@ module.exports = function (plop) {
         skipIfExists: true,
         path: 'src/models/{{ pascalCase name }}/types.ts',
         templateFile: 'templates/model/types.ts',
+      },
+    ],
+  })
+  plop.setGenerator('screen', {
+    description: 'generate a screen',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Name a new screen. NOTE: manually register the new screen in the navigator.',
+        validate(value) {
+          return (/.+/).test(value) ? true : 'name is required'
+        },
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/screens/{{ pascalCase name }}Screen/index.tsx',
+        templateFile: 'templates/screen/index.tsx',
+      },
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/screens/{{ pascalCase name }}Screen/view.tsx',
+        templateFile: 'templates/screen/view.tsx',
+      },
+      {
+        type: 'add',
+        skipIfExists: true,
+        path: 'src/screens/{{ pascalCase name }}Screen/styles.ts',
+        templateFile: 'templates/screen/styles.ts',
       },
     ],
   })
