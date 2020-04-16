@@ -42,3 +42,7 @@ Simply start you project using the template:
 ```sh
 npx react-native init MyApp --template @datarockets/react-native-template-ts
 ```
+If you experience issue initializing the project with the template try to use the latest CLI explicitly:
+```sh
+npx react-native@latest init MyApp --template @datarockets/react-native-template-ts
+```
